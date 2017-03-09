@@ -1,0 +1,27 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+# An controller showing form designs
+GET     /                           controllers.FormController.index
+GET     /inlineform                 controllers.FormController.inlineForm
+GET     /stackedform                controllers.FormController.stackedForm
+GET     /alignedform                controllers.FormController.alignedForm
+GET     /multicolform               controllers.FormController.multicolForm
+
+# An controller showing table designs
+GET     /tabledesigns               controllers.TableController.table
+
+# An controller showing grid designs
+GET     /simplegrid                 controllers.GridController.simpleGrid
+
+# An controller showing button designs
+GET     /button                     controllers.ButtonController.defaultButton
+
+# An example controller showing how to use dependency injection
+GET     /count                      controllers.CountController.count
+# An example controller showing how to write asynchronous code
+GET     /message                    controllers.AsyncController.message
+
+# Map static resources from the /public folder to the /assets URL path
+GET     /assets/*file               controllers.Assets.versioned(path="/public", file: Asset)

@@ -1,0 +1,70 @@
+@*
+* This template takes a single argument, a String containing a
+* message to display.
+*@
+@(message: String)
+
+@*
+* Call the `main` template with two arguments. The first
+* argument is a `String` with the title of the page, the second
+* argument is an `Html` object containing the body of the page.
+*@
+@main("Welcome to Play") {
+
+<div>
+    <style>
+.custom-restricted-width {
+    /* To limit the menu width to the content of the menu: */
+    display: inline-block;
+    /* Or set the width explicitly: */
+    /* width: 10em; */
+}
+
+    </style>
+    <div class="pure-g">
+        <div class="pure-u-1-1">
+            <center>
+                <div class="pure-menu custom-restricted-width">
+                    <span class="pure-menu-heading">Design Templates for :</span>
+
+                    <ul class="pure-menu-list">
+                        <li class="pure-menu-item"><a href=@routes.TableController.table
+                                                      class="pure-menu-link">Designs for Table</a>
+                        </li>
+                    </ul>
+
+                    <ul class="pure-menu-list">
+                        <li class="pure-menu-item"><a href=@routes.GridController.simpleGrid
+                                                      class="pure-menu-link">Design for Grid</a>
+                        </li>
+                    </ul>
+
+                    <ul class="pure-menu-list">
+                        <li class="pure-menu-item"><a href=@routes.FormController.inlineForm
+                                                      class="pure-menu-link">Inline Form Design</a>
+                        </li>
+                        <li class="pure-menu-item"><a href=@routes.FormController.stackedForm
+                                                      class="pure-menu-link">Stacked Form Design</a>
+                        </li>
+                        <li class="pure-menu-item"><a href=@routes.FormController.alignedForm
+                                                      class="pure-menu-link">Aligned Form Design</a>
+                        </li>
+                        <li class="pure-menu-item"><a href=@routes.FormController.multicolForm
+                                                      class="pure-menu-link">Multi Column Form
+                            Design</a></li>
+                    </ul>
+
+                    <ul class="pure-menu-list">
+                        <li class="pure-menu-item"><a href=@routes.ButtonController.defaultButton
+                                                      class="pure-menu-link">Design for Buttons</a>
+                        </li>
+                    </ul>
+                </div>
+            </center>
+        </div>
+    </div>
+
+
+</div>
+
+}
